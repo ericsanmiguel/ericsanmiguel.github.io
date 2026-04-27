@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research — Eric San Miguel</title>
+    <link rel="icon" type="image/png" href="images/psu-logo.png">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-name">Eric San Miguel</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="research.html" class="active">Research</a>
+                <a href="other.html">Other</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Research Section -->
+    <section id="research" class="section page-section">
+        <div class="section-container">
+            <h2>Working Papers</h2>
+
+            <div class="paper">
+                <div class="paper-header">
+                    <h3>Horizontal Mergers Post-Deregulation: The Case of the Mexico City Retail Gasoline Market</h3>
+                </div>
+                <button class="abstract-toggle" onclick="toggleAbstract(this)">Show Abstract</button>
+                <div class="abstract" style="display: none;">
+                    <p>This paper studies the impact of mergers and acquisitions on prices and markups in the Mexico City retail gasoline market following price deregulation. Using a difference-in-differences design, I find that merging stations significantly increased prices and markups relative to non-merging stations. To understand what drives these changes, I estimate a structural model of spatial competition in which stations are differentiated by location along consumers' commuting routes and firms compete on prices. I use the model to decompose price changes into three channels: increased market concentration, changes in marginal costs, and changes in product quality. My counterfactuals reveal that increased concentration accounts for only a small fraction of the observed increases. Instead, stations that switched upstream suppliers after a merger lowered their wholesale costs, accounting for part of the higher markups. The remaining price increases are consistent with improvements in unobserved station quality. These findings highlight that post-merger price increases need not reflect market power, particularly when ownership changes coincide with other operational changes.</p>
+                </div>
+            </div>
+
+            <div class="paper">
+                <div class="paper-header">
+                    <h3>Criminal Politicians, Political Parties, and Selection: Evidence from Indian National Elections</h3>
+                    <span class="paper-coauthor">with <a href="https://www.amruthamanjunath.com/home" target="_blank" class="coauthor-link">Amrutha Manjunath</a></span>
+                </div>
+                <button class="abstract-toggle" onclick="toggleAbstract(this)">Show Abstract</button>
+                <div class="abstract" style="display: none;">
+                    <p>Criminally accused candidates in India win at three times the rate of non-criminals upon nomination, despite evidence that voters penalize criminal records and that criminal politicians worsen governance outcomes. We argue that this pattern is driven by strategic nomination by political parties. We develop a model in which parties trade off a candidate's electoral viability against a reputational cost for fielding a criminal. Because this cost is borne regardless of the election outcome, parties nominate criminals only in competitive districts where candidate quality can be decisive, not in safe seats or hopeless ones. Criminals thus win more upon nomination, not because voters prefer them, but because parties nominate them only when they are expected to tip the race. Using data from four Indian parliamentary elections, we document an inverse-U relationship between district competitiveness and criminal nomination, consistent with the model's predictions.</p>
+                </div>
+            </div>
+
+            <h2>Work in Progress</h2>
+
+            <div class="paper">
+                <div class="paper-header">
+                    <h3>Population Aging and Hospital Quality: Evidence from Medicare</h3>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="section-container">
+            <p>Eric San Miguel &middot; eric.sanmiguel@psu.edu</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleAbstract(button) {
+            const abstract = button.nextElementSibling;
+            if (abstract.style.display === 'none') {
+                abstract.style.display = 'block';
+                button.textContent = 'Hide Abstract';
+            } else {
+                abstract.style.display = 'none';
+                button.textContent = 'Show Abstract';
+            }
+        }
+    </script>
+
+</body>
+</html>
