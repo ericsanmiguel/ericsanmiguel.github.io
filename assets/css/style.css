@@ -83,11 +83,11 @@ section.page-section {
 }
 
 .hero-photo img {
-    width: 200px;
-    height: 200px;
+    width: 220px;
+    height: 220px;
     border-radius: 50%;
     object-fit: cover;
-    object-position: center 20%;
+    object-position: center 15%;
 }
 
 .hero-content {
@@ -310,7 +310,8 @@ section.page-section {
     }
 
     .hero-photo img {
-        width: 160px;
+        width: 175px;
+        height: 175px;
     }
 
     .contact-links {
