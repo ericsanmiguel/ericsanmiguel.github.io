@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ericsanmiguel.github.io/sitemap.xml
+Sitemap: https://ericsanmiguel.github.io/sitemap_v2.xml
