@@ -1635,15 +1635,18 @@ closely related to Berry (1994) but is limited in terms of consumer
 heterogeneity. The following homework (problem set 2) will introduce
 simulation-based estimators to provide much richer sources of consumer
 heterogeneity.</p>
-<p>The file contains information on 10 different soft drinks, for 100
-different markets (or time periods). This dataset contains the following
-variables: product_ID (the product ID), nest (a variable indicating if
-the product is a diet or a regular soda), price (the product’s price
-during period t, in USD), market_share (the market share of the product
-during period t), sugar (the grams of sugar contained in product <span class="math inline">\(j\)</span> at time <span class="math inline">\(t\)</span>), caffeine (the milligrams of caffeine
+<p>The file <strong>product_data.csv</strong> contains information on 10
+different soft drinks, for 100 different markets (or time periods). This
+dataset contains the following variables: product_ID (the product ID),
+nest (a variable indicating if the product is a diet or a regular soda),
+price (the product’s price during period t, in USD), market_share (the
+market share of the product during period t), sugar (the grams of sugar
 contained in product <span class="math inline">\(j\)</span> at time
-<span class="math inline">\(t\)</span>), caffeine_extract_price (the
-price of caffeine extract paid by the firm manufacturing product <span class="math inline">\(j\)</span> at time <span class="math inline">\(t\)</span>), corn_syrup_price (the price of high
+<span class="math inline">\(t\)</span>), caffeine (the milligrams of
+caffeine contained in product <span class="math inline">\(j\)</span> at
+time <span class="math inline">\(t\)</span>), caffeine_extract_price
+(the price of caffeine extract paid by the firm manufacturing product
+<span class="math inline">\(j\)</span> at time <span class="math inline">\(t\)</span>), corn_syrup_price (the price of high
 fructose corn syrup paid by the firm manufacturing product <span class="math inline">\(j\)</span> at time <span class="math inline">\(t\)</span>), and <span class="math inline">\(t\)</span> (the observation’s time period).</p>
 <div id="a-multinomial-logit" class="section level2">
 <h2>1(a): Multinomial Logit</h2>
@@ -1679,7 +1682,7 @@ u_{ikt} \: \text{for all} \: k) = \frac{\exp(\delta_{jt})}{\sum_k
 Regular_j + \xi_{jt}\)</span>.</p>
 <p>Assume that <span class="math inline">\(p_{jt}\)</span>, <span class="math inline">\(sug_{jt}\)</span>, and <span class="math inline">\(caf_{jt}\)</span> are all exogenous variables.
 Estimate the parameters of this model (<span class="math inline">\(\alpha\)</span>, <span class="math inline">\(\beta_1\)</span>, <span class="math inline">\(\beta_2\)</span>, <span class="math inline">\(\gamma_d\)</span>, and <span class="math inline">\(\gamma_r\)</span>).</p>
-<p></p>
+<p><strong>Solution:</strong></p>
 <p>Note that we can rearrange the market share equation for the outside
 option (product <span class="math inline">\(0\)</span>) to get the
 following expression:</p>
@@ -1748,17 +1751,21 @@ summary(OLS_result)</code></pre>
 <h2>Problem 1(b)</h2>
 <p>Now assume that <span class="math inline">\(sug_{jt}\)</span>, $
 caf_{jt}$, $ Diet_j$ and $ Regular_j$ are exogenous, but that <span class="math inline">\(p_{jt}\)</span> is correlated with the unobserved
-quality <span class="math inline">\(\xi_{jt}\)</span>. Use <span class="math inline">\(\text{caffeine\_extract\_price}_{jt}\)</span> and
-<span class="math inline">\(\text{corn\_syrup\_price}_{jt}\)</span> as
+quality <span class="math inline">\(\xi_{jt}\)</span>. Use
+<code>caffeine_extract_price</code> and <code>corn_syrup_price</code> as
 instruments for prices, and estimate the parameters of the model. What
 conditions must these two variables satisfy to be valid instruments?</p>
-<p> If <span class="math inline">\(p_{jt}\)</span> is correlated with
-the unobserved product quality <span class="math inline">\(\xi_{jt}\)</span>, the estimates we obtained in
-part (a) will be biased. We can therefore use the usual 2SLS IV
-estimator using <span class="math inline">\(\text{caffeine\_extract\_price}_{jt}\)</span> and
-<span class="math inline">\(\text{corn\_syrup\_price}_{jt}\)</span> as
-instruments for prices. In order for us to use these variables as
-instruments, they must satisfy the usual IV assumptions:</p>
+<p><strong>Solution:</strong> If <span class="math inline">\(p_{jt}\)</span> is correlated with the unobserved
+product quality <span class="math inline">\(\xi_{jt}\)</span>, the
+estimates we obtained in part (a) will be biased. We can therefore use
+the usual 2SLS IV estimator using <code>caffeine_extract_price</code>
+and <code>corn_syrup_price</code> as instruments for prices. In order
+for us to use these variables as instruments, they must satisfy the
+usual IV assumptions:</p>
+<ol style="list-style-type: decimal">
+<li>$[z_{jt} _{jt}] = 0 $</li>
+<li>$[z_{jt} x_{jt}^{T}] : $ is full rank</li>
+</ol>
 <p>Where <span class="math inline">\(z_{jt}\)</span> is a vector with
 all the exogenous variables in our model and <span class="math inline">\(x_{jt}\)</span> is a vector with <span class="math inline">\(sug_{jt}\)</span>, $ caf_{jt}$, $ Diet_j$, $
 Regular_j$, and <span class="math inline">\(p_{jt}\)</span>. In our
@@ -1803,7 +1810,7 @@ vector of price own-price derivatives <span class="math inline">\(\frac{\partial
 for all <span class="math inline">\(j\)</span> and all <span class="math inline">\(t\)</span>. Use this vector to estimate the vector
 of price elasticities <span class="math inline">\(\frac{\partial
 s_{jt}}{\partial p_{jt}} \frac{p_{jt}}{s_{jt}}\)</span> for all <span class="math inline">\(j\)</span> and all <span class="math inline">\(t\)</span>.</p>
-<p></p>
+<p><strong>Solution:</strong></p>
 <p>The own-price derivative of the choice probability for product <span class="math inline">\(j\)</span> in period <span class="math inline">\(t\)</span> is:</p>
 <p><span class="math display">\[
 \frac{\partial s_{jt}}{\partial p_{jt} }=\alpha s_{
@@ -1846,7 +1853,7 @@ vector of cross-price derivatives <span class="math inline">\(\frac{\partial s_{
 for all <span class="math inline">\(j \neq 1\)</span> and all <span class="math inline">\(t\)</span>. Use this vector to estimate the vector
 of cross-price elasticities <span class="math inline">\(\frac{\partial
 s_{jt}}{\partial p_{1t}} \frac{p_{1t}}{s_{jt}}\)</span> for all <span class="math inline">\(j \neq 1\)</span> and all <span class="math inline">\(t\)</span>.</p>
-<p></p>
+<p><strong>Solution:</strong></p>
 <p>The cross-price derivatives are</p>
 <p><span class="math display">\[
 \frac{\partial s_{jt}}{\partial p_{1t} }=-\alpha s_{1t} s_{jt}
@@ -1968,7 +1975,7 @@ time <span class="math inline">\(t\)</span> is</p>
 \end{equation}\]</span></p>
 <p>Estimate the parameters of the model (<span class="math inline">\(\alpha\)</span>, <span class="math inline">\(\beta_1\)</span>, <span class="math inline">\(\beta_2\)</span>, <span class="math inline">\(\gamma_d\)</span>, and <span class="math inline">\(\gamma_r\)</span>, and <span class="math inline">\(\sigma\)</span>), assuming that <span class="math inline">\(p_{jt}\)</span> is correlated with the unobserved
 quality <span class="math inline">\(\xi_{jt}\)</span>.</p>
-<p></p>
+<p><strong>Solution:</strong></p>
 <p>We can invert the demand system to get the following linear
 expression:</p>
 <p><span class="math display">\[ \log \left(s_{j t}\right)- \log
@@ -2070,7 +2077,7 @@ vector of price self-derivatives <span class="math inline">\(\frac{\partial s_{j
 for all <span class="math inline">\(j\)</span> and all <span class="math inline">\(t\)</span>. Use this vector to estimate the vector
 of price elasticities <span class="math inline">\(\frac{\partial
 s_{jt}}{\partial p_{jt}} \frac{p_{jt}}{s_{jt}}\)</span> for all <span class="math inline">\(j\)</span> and all <span class="math inline">\(t\)</span>.</p>
-<p></p>
+<p><strong>Solution:</strong></p>
 <p>The derivative of product <span class="math inline">\(j\)</span>’s
 share, for <span class="math inline">\(j \in \mathcal{J}_g\)</span>,
 with respect to its own price is given by</p>
@@ -2124,7 +2131,7 @@ vector of cross-price derivatives <span class="math inline">\(\frac{\partial s_{
 for all <span class="math inline">\(j \neq 1\)</span> and all <span class="math inline">\(t\)</span>. Use this vector to estimate the vector
 of cross-price elasticities <span class="math inline">\(\frac{\partial
 s_{jt}}{\partial p_{1t}} \frac{p_{1t}}{s_{jt}}\)</span> for all <span class="math inline">\(j \neq 1\)</span> and all <span class="math inline">\(t\)</span>.</p>
-<p></p>
+<p><strong>Solution:</strong></p>
 <p>The derivative of product <span class="math inline">\(j\)</span> ’s
 share with respect to product <span class="math inline">\(k\)</span> ’s
 price, for <span class="math inline">\(j\)</span> and <span class="math inline">\(k\)</span> both in group <span class="math inline">\(g\)</span>, equals</p>
@@ -2196,7 +2203,7 @@ cross_price_elasticity_nested_logit_vec</code></pre>
 <h2>Problem 2(d)</h2>
 <p>How do the results you obtained from parts 2 (a), 2 (b), and 2 (c)
 compare to the ones from parts 1 (b), 1 (c), and 1(d)?</p>
-<p></p>
+<p><strong>Solution:</strong></p>
 <p>Note that given the assumptions of Multinomial Logit, the cross-price
 elasticity of all products with respect to product 1 is constant (see
 problem 1(d)). To see why, let’s go back to the expression for <span class="math inline">\(\frac{\partial s_{jt}}{\partial p_{kt} }\)</span>.
@@ -2218,6 +2225,12 @@ however, that the elasticity is still constant within each group.</p>
 </div>
 <div id="problem-2e" class="section level2">
 <h2>Problem 2(e)</h2>
+<p>Write a function that generates the Jacobian matrix of price
+derivatives <span class="math inline">\(\Delta(p)\)</span> (i.e., <span class="math inline">\(\Delta_{ij} = \frac{\partial s_j}{p_i}\)</span>)
+for a given period, under the nested logit specification. Your function
+should take the time period, product variables, and model parameters as
+arguments, and return the Jacobian matrix. Print the Jacobian for the
+last time period in the sample (t = 100).</p>
 <pre class="r"><code>build_jacobian_matrix_nested_logit &lt;- function(product_variables, alpha, sigma, time_period){
 
   
@@ -2282,7 +2295,7 @@ p_{jt}  q_{jt} - c_{jt}  q_{jt}  \]</span></p>
 <span class="math inline">\(j\)</span>’s marginal cost, and <span class="math inline">\(q_{jt} = s_{jt} \bar{M}\)</span>. <span class="math inline">\(\bar{M} = 10,000\)</span> is the number of
 consumers in this market. Use the firms’ FOCs to estimate the marginal
 cost for all <span class="math inline">\(j\)</span> and all <span class="math inline">\(t\)</span>.</p>
-<p></p>
+<p><strong>Solution:</strong></p>
 <p>The FOC for firm <span class="math inline">\(f\)</span> owning
 product <span class="math inline">\(j\)</span> is given by:</p>
 <p><span class="math display">\[ \frac{\partial \Pi_{ft}}{\partial
@@ -2324,7 +2337,7 @@ marginal_cost</code></pre>
 <p>Now assume that the firms who own products 1 and 2 merge at <span class="math inline">\(t = 100\)</span>, so that a single firm now owns
 both products. Simulate how the prices of all firms would change in this
 scenario.</p>
-<p></p>
+<p><strong>Solution:</strong></p>
 <p>The FOCs for firm <span class="math inline">\(1\)</span> are now
 given by:</p>
 <p><span class="math display">\[ \frac{\partial \Pi_{1t}}{\partial
@@ -2447,7 +2460,7 @@ change after the merger? How does the average price of competing
 products in the same nest change after the merger? How does the average
 price for competing products in a different nest change after the
 merger?</p>
-<p></p>
+<p><strong>Solution:</strong></p>
 <pre class="r"><code>original_prices &lt;- data.table(product_ID = 
 product_data[t == 100]$product_ID, original_price = 
 product_data[t == 100]$price)
@@ -2479,7 +2492,7 @@ result</code></pre>
 <p>Now instead assume that all firms collude during the last period (t =
 100) and choose the prices that maximize the sum of all profits.
 Simulate how the prices of all firms would change in this scenario.</p>
-<p></p>
+<p><strong>Solution:</strong></p>
 <p>Note that since firms maximize the sum of all firms’ profits, the
 equilibrium solution will be equivalent to the one we would have under a
 hypothetical merger between all firms. Therefore, all we have to do is
