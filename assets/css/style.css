@@ -335,3 +335,67 @@ section.page-section {
         flex-direction: column;
     }
 }
+
+/* Teaching */
+.teaching-lead {
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    max-width: 820px;
+}
+
+.lang-tags {
+    display: inline-flex;
+    gap: 0.4rem;
+    margin-left: 0.6rem;
+    vertical-align: middle;
+}
+
+.lang-tag {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    padding: 0.12rem 0.5rem;
+    border-radius: 3px;
+    background: #eef2ff;
+    color: #2563eb;
+    border: 1px solid #dbe3ff;
+    position: relative;
+    top: -2px;
+}
+
+.material-desc {
+    color: #444;
+    font-size: 1rem;
+    line-height: 1.7;
+    margin: 0.5rem 0 0.9rem;
+    max-width: 820px;
+}
+
+.material-links {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.material-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    color: #2563eb;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.material-link:hover {
+    color: #1d4ed8;
+    text-decoration: underline;
+}
+
+.material-link svg {
+    flex-shrink: 0;
+}

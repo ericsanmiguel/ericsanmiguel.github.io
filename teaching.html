@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teaching — Eric San Miguel</title>
+    <meta name="description" content="Teaching materials by Eric San Miguel: PhD Industrial Organization problem sets on logit, nested-logit, and random-coefficients (BLP) demand estimation, with reference solutions in R and Julia.">
+    <meta name="author" content="Eric San Miguel">
+    <link rel="canonical" href="https://ericsanmiguel.github.io/teaching.html">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ericsanmiguel.github.io/teaching.html">
+    <meta property="og:title" content="Teaching — Eric San Miguel">
+    <meta property="og:description" content="PhD Industrial Organization problem sets on demand estimation, with reference solutions in R and Julia.">
+    <meta property="og:image" content="https://ericsanmiguel.github.io/images/profile.jpg">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Teaching — Eric San Miguel">
+    <meta name="twitter:description" content="PhD Industrial Organization problem sets on demand estimation, with reference solutions in R and Julia.">
+    <meta name="twitter:image" content="https://ericsanmiguel.github.io/images/profile.jpg">
+    <link rel="icon" type="image/png" href="images/psu-logo.png">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-name">Eric San Miguel</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="research.html">Research</a>
+                <a href="teaching.html" class="active">Teaching</a>
+                <a href="other.html">Other</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Teaching Section -->
+    <section id="teaching" class="section page-section">
+        <div class="section-container">
+            <h2>Teaching</h2>
+
+            <p class="teaching-lead">
+                I served as a teaching assistant for the graduate Industrial Organization course at
+                <a href="https://econ.la.psu.edu/" target="_blank" class="dept-link">Penn State</a>
+                (Economics 543), where I wrote the problem sets and led the accompanying TA sessions.
+                The two assignments below build the modern toolkit of structural demand estimation from the
+                ground up &mdash; from logit and nested-logit models through full random-coefficients (BLP)
+                estimation. I wrote complete reference solutions for each, implemented in both
+                <strong>R</strong> and <strong>Julia</strong>.
+            </p>
+
+            <div class="paper">
+                <div class="paper-header">
+                    <h3>Problem Set 1 &mdash; Logit and Nested-Logit Demand<span class="lang-tags"><span class="lang-tag">R</span><span class="lang-tag">Julia</span></span></h3>
+                </div>
+                <p class="material-desc">
+                    Estimating multinomial and nested-logit demand from market shares, following Berry (1994):
+                    inverting shares to recover mean utilities, computing own- and cross-price elasticities,
+                    recovering marginal costs from the Bertrand first-order conditions, and simulating the
+                    price effects of a two-firm merger and of full industry collusion.
+                </p>
+                <div class="material-links">
+                    <a href="teaching/io-ps1-assignment.pdf" class="material-link" target="_blank">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                        Assignment (PDF)
+                    </a>
+                    <a href="teaching/io-ps1-solutions.pdf" class="material-link" target="_blank">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                        Solutions (PDF)
+                    </a>
+                </div>
+            </div>
+
+            <div class="paper">
+                <div class="paper-header">
+                    <h3>Problem Set 2 &mdash; Random-Coefficients (BLP) Demand<span class="lang-tags"><span class="lang-tag">R</span><span class="lang-tag">Julia</span></span></h3>
+                </div>
+                <p class="material-desc">
+                    Full random-coefficients (mixed-logit) demand estimation in the tradition of BLP:
+                    simulating consumer heterogeneity, computing predicted shares by Monte Carlo integration,
+                    inverting shares for mean utilities with the BLP contraction mapping, and estimating the
+                    nonlinear parameters by GMM using Gandhi&ndash;Houde (2023) differentiation instruments
+                    and an analytic gradient.
+                </p>
+                <div class="material-links">
+                    <a href="teaching/io-ps2-assignment.pdf" class="material-link" target="_blank">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                        Assignment (PDF)
+                    </a>
+                    <a href="teaching/io-ps2-solutions.pdf" class="material-link" target="_blank">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                        Solutions (PDF)
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="section-container">
+            <p>Eric San Miguel &middot; eric.sanmiguel@psu.edu</p>
+        </div>
+    </footer>
+
+</body>
+</html>
