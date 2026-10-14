@@ -43,11 +43,12 @@
 
             <div class="paper">
                 <div class="paper-header">
-                    <h3>Medicare and Hospital Quality</h3>
+                    <h3><a href="EricSanMiguel_JMP.pdf" target="_blank" class="paper-title-link">Medicare and Hospital Quality</a></h3>
                 </div>
                 <button class="abstract-toggle" onclick="toggleAbstract(this)">Hide Abstract</button>
+                <a href="EricSanMiguel_JMP.pdf" target="_blank" class="abstract-toggle paper-pdf-link">Paper (PDF)</a>
                 <div class="abstract" style="display: block;">
-                    <p>This paper studies how Medicare payment policy shapes the quality of hospital care. I build a structural model of hospital quality choice and hospital&ndash;insurer bargaining in which quality attracts both Medicare and commercial patients, affects negotiated prices, and increases the cost of treating patients. I estimate the model using Medicare and commercial claims from Massachusetts. I find that patients of both payers value quality similarly, but that commercial margins are much larger and negotiated commercial prices respond to quality about 17 times more than Medicare's quality adjustment. As a result, on average, commercial patients account for 81 percent of hospitals' marginal return to quality, despite making up only 34 percent of demand. Therefore, as the population ages through 2040 and Medicare's share increases, equilibrium quality and average patient welfare fall. A budget-neutral reform that makes Medicare rates more responsive to quality prevents this decline, but its payments and quality gains concentrate at the highest-quality, highest-margin hospitals.</p>
+                    <p>This paper studies how Medicare payment policy shapes hospital quality and patient welfare. I build a structural model of hospital quality choice and hospital&ndash;insurer bargaining in which quality increases demand from Medicare and commercial patients, affects negotiated commercial prices, and raises hospitals' costs. I estimate the model using Massachusetts Medicare and commercial claims. I find that Medicare and commercial demand respond similarly to quality, but commercial margins are much larger and negotiated commercial prices rise with quality about 17 times more than Medicare's quality adjustment. At the average hospital, commercial patients account for 81 percent of the marginal return to quality. Therefore, increases in Medicare's share, through population aging or lowering the age of eligibility, decrease equilibrium quality and average patient welfare. I show that making Medicare rates more responsive to quality can prevent this decline, but payments and quality gains concentrate at the highest-quality, highest-margin hospitals.</p>
                 </div>
             </div>
 
@@ -86,7 +87,7 @@
 
     <script>
         function toggleAbstract(button) {
-            const abstract = button.nextElementSibling;
+            const abstract = button.parentElement.querySelector('.abstract');
             if (abstract.style.display === 'none') {
                 abstract.style.display = 'block';
                 button.textContent = 'Hide Abstract';

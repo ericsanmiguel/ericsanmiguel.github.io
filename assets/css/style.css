@@ -240,6 +240,22 @@ section.page-section {
     color: #2563eb;
 }
 
+/* PDF link styled like the abstract button */
+.paper-pdf-link {
+    display: inline-block;
+    text-decoration: none;
+    margin-left: 0.4rem;
+}
+
+.paper-title-link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.paper-title-link:hover {
+    color: #2563eb;
+}
+
 .abstract {
     margin-top: 0.8rem;
     padding: 1rem 1.2rem;
