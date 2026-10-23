@@ -78,47 +78,48 @@ section.page-section {
     align-items: flex-start;
 }
 
-.hero-photo {
+.hero-sidebar {
     flex-shrink: 0;
+    width: 280px;
 }
 
-.hero-photo img {
-    width: 220px;
-    height: 220px;
-    border-radius: 50%;
-    object-fit: cover;
-    object-position: center 15%;
+.hero-sidebar img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin-bottom: 1.2rem;
 }
 
 .hero-content {
     flex: 1;
 }
 
-.hero-content h1 {
-    font-size: 2rem;
+.hero-sidebar h1 {
+    font-size: 1.3rem;
     font-weight: 700;
     margin-bottom: 0.1rem;
     color: #1a1a1a;
 }
 
 .subtitle {
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: #555;
     margin-bottom: 0;
     font-weight: 400;
 }
 
 .affiliation {
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: #777;
     margin-bottom: 0.6rem;
 }
 
 .contact-links {
     display: flex;
-    gap: 1.5rem;
-    margin-bottom: 1.2rem;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
 }
 
 .contact-link {
@@ -282,7 +283,7 @@ section.page-section {
     justify-content: center;
     gap: 1rem;
     flex-wrap: wrap;
-    padding: 0 2rem 2rem;
+    padding-top: 1.2rem;
     scroll-margin-top: 5rem;
 }
 
@@ -329,13 +330,24 @@ section.page-section {
         text-align: center;
     }
 
-    .hero-photo img {
-        width: 175px;
-        height: 175px;
+    .hero-sidebar {
+        width: auto;
+    }
+
+    .hero-sidebar img {
+        width: 200px;
+        height: 200px;
+        margin: 0 auto 1.2rem;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: center bottom;
     }
 
     .contact-links {
+        flex-direction: row;
+        flex-wrap: wrap;
         justify-content: center;
+        gap: 1.5rem;
     }
 
     .bio {
