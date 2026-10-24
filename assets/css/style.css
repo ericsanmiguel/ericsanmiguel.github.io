@@ -349,7 +349,7 @@ section.page-section {
         margin: 0 auto 1.2rem;
         border-radius: 50%;
         object-fit: cover;
-        object-position: center bottom;
+        object-position: center 75%;
     }
 
     .contact-links {
