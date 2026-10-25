@@ -110,22 +110,40 @@ section.page-section {
 
 .hero-sidebar h1 {
     font-size: 1.3rem;
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 0.1rem;
     color: #1a1a1a;
 }
 
 .subtitle {
-    font-size: 1rem;
-    color: #555;
+    font-size: 0.95rem;
+    color: #444;
     margin-bottom: 0;
     font-weight: 400;
 }
 
 .affiliation {
-    font-size: 0.9rem;
-    color: #777;
-    margin-bottom: 0.6rem;
+    font-size: 0.95rem;
+    color: #444;
+    margin-bottom: 0;
+}
+
+.affiliation .dept-link {
+    color: #444;
+}
+
+.affiliation .dept-link:hover {
+    color: #2563eb;
+}
+
+.fields {
+    font-size: 0.95rem;
+    color: #444;
+    line-height: 1.6;
+    margin: 0.7rem 0 1rem;
+    padding: 0.7rem 0;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
 }
 
 .contact-links {
@@ -141,7 +159,7 @@ section.page-section {
     gap: 0.4rem;
     color: #2563eb;
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     transition: color 0.2s;
 }
 
@@ -301,7 +319,7 @@ section.page-section {
     justify-content: center;
     gap: 1rem;
     flex-wrap: wrap;
-    padding-top: 1.2rem;
+    padding-top: 2rem;
     scroll-margin-top: 5rem;
 }
 
