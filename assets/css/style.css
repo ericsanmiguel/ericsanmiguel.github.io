@@ -191,12 +191,15 @@ section.page-section {
 }
 
 .section h2 {
-    font-size: 1.75rem;
+    font-size: 1.45rem;
     font-weight: 600;
     color: #1a1a1a;
-    margin-bottom: 1.5rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 2px solid #e5e5e5;
+    margin-bottom: 1.25rem;
+}
+
+/* Extra space above a heading that follows a paper (e.g. Working Papers) */
+.paper + h2 {
+    margin-top: 2.5rem;
 }
 
 /* Papers */
@@ -251,7 +254,7 @@ section.page-section {
 }
 
 .coauthor-link {
-    color: #2563eb;
+    color: #001E44;
     text-decoration: none;
 }
 
@@ -260,12 +263,14 @@ section.page-section {
 }
 
 .abstract-toggle {
-    background: none;
-    border: 1px solid #d0d0d0;
-    color: #555;
+    display: inline-block;
+    background: #001E44;
+    border: 1px solid #001E44;
+    color: #ffffff;
     padding: 0.35rem 0.9rem;
     font-size: 0.95rem;
     font-family: inherit;
+    line-height: 1.5;
     border-radius: 4px;
     cursor: pointer;
     transition: all 0.2s;
@@ -273,8 +278,8 @@ section.page-section {
 }
 
 .abstract-toggle:hover {
-    border-color: #2563eb;
-    color: #2563eb;
+    background: #1e3a6e;
+    border-color: #1e3a6e;
 }
 
 /* PDF link styled like the abstract button */
@@ -297,7 +302,7 @@ section.page-section {
     margin-top: 0.8rem;
     padding: 1rem 1.2rem;
     background: #f8f9fa;
-    border-left: 3px solid #2563eb;
+    border-left: 3px solid #001E44;
     border-radius: 0 4px 4px 0;
 }
 
