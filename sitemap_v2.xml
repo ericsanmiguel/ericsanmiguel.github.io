@@ -7,19 +7,19 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://ericsanmiguel.github.io/research.html</loc>
+        <loc>https://ericsanmiguel.github.io/research</loc>
         <lastmod>2026-10-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://ericsanmiguel.github.io/teaching.html</loc>
+        <loc>https://ericsanmiguel.github.io/teaching</loc>
         <lastmod>2026-10-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://ericsanmiguel.github.io/other.html</loc>
+        <loc>https://ericsanmiguel.github.io/other</loc>
         <lastmod>2026-10-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
