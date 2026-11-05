@@ -64,6 +64,11 @@ a {
     text-decoration: none;
 }
 
+/* margin-left: auto keeps the links on the right on the home page, which has no name in the menu */
+.nav-links {
+    margin-left: auto;
+}
+
 .nav-links a {
     color: var(--muted);
     text-decoration: none;
@@ -400,6 +405,7 @@ section.page-section {
     }
 
     .nav-links {
+        margin-left: 0;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
